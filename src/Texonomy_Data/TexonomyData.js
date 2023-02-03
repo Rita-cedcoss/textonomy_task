@@ -32,7 +32,8 @@ const TexonomyData = () => {
     }
   };
   // function for dependent dropdown
-  const selectHandler = (objData, ind) => {
+  const selectHandler = (e,objData, ind) => {
+    console.log(objData);
     if (Object.keys(objData).length > 0) {
       if (ind < nestedArr.length) {
         nestedArr.splice(ind + 1);
@@ -54,9 +55,9 @@ const TexonomyData = () => {
             return (
               <select
                 className="selectBox"
-                onChange={(e) => selectHandler(item[e.target.value], i)}
+                onChange={(e) => selectHandler(e, item[e.target.value], i)}
                 ref={(ref) => (selectRef.current[i] = ref)}
-              >
+              > <option selected hidden>select</option>
                 {Object.keys(item).map((ele) => {
                   return <option value={ele}>{ele}</option>;
                 })}
