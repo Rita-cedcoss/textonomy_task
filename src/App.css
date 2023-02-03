@@ -36,3 +36,23 @@
     transform: rotate(360deg);
   }
 }
+.select {
+    min-height:100px ;
+    max-width: 500px;
+    border: 1px solid black;
+    margin:30px auto;
+    padding: 10px 10px 30px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.selectBox {
+  height: 40px;
+  width: 400px;
+  font-size: 20px;
+  border-radius: 5px;
+  background-color: white;
+  margin-top: 20px;
+  
+}
